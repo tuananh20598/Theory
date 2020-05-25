@@ -1,0 +1,395 @@
+@charset "UTF-8";
+@import "https://fonts.googleapis.com/css?family=Raleway:100,300,600";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    color: #9a9a9a;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.background {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: -1;
+    /* background-size: 100%; */
+    /* background-image: url(images/banner.jpg);
+    background-attachment: scroll; */
+}
+
+.background img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.content {
+    border-top: 8px solid #5385c1;
+}
+
+
+/* Menu */
+
+.content .menu {
+    padding-top: 50px;
+    display: flex;
+}
+
+.content .menu a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.content .menu .left,
+.content .menu .right {
+    display: flex;
+    flex: 1;
+}
+
+.content .menu .left a {
+    font-size: 1em;
+}
+
+.content .menu .right a {
+    font-size: 0.8em;
+    color: #d4e0ef;
+}
+
+.content .menu .right a:hover {
+    color: white;
+}
+
+.content .menu .right a:not(:last-child) {
+    margin-right: 25px;
+}
+
+.content .menu .right {
+    justify-content: flex-end;
+}
+
+.content .menu .right span {
+    display: none;
+    cursor: pointer;
+}
+
+#menu-mobile {
+    width: 280px;
+    padding: 20px;
+    background: #5385c1;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: -320px;
+    transition: right ease-in-out 0.25s;
+}
+
+#menu-mobile .wrap {
+    position: relative;
+}
+
+#menu-mobile .wrap .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#menu-mobile ul {
+    list-style: none;
+}
+
+#menu-mobile ul a {
+    text-decoration: none;
+    color: gainsboro;
+    display: block;
+    line-height: 45px;
+}
+
+#menu-mobile ul a:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+/* Banner */
+
+.content .banner {
+    margin-top: 50px;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+
+.content .banner h1 {
+    font-size: 3.5em;
+    font-weight: 100;
+    color: #fff;
+    line-height: 1em;
+    margin: 0 0 0.5em 0;
+}
+
+.content .banner p {
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 1.75em;
+}
+
+
+/* News */
+
+.content .news {
+    width: 100%;
+    background-color: white;
+    padding: 50px 0;
+}
+
+.content .news .list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content .news .item {
+    display: flex;
+    width: calc(1 / 3 * 100%);
+    box-sizing: border-box;
+}
+
+.content .news .item .title {
+    color: #5385c1;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0 0 1em 0;
+    font-size: 1.35em;
+}
+
+.content .news .item .description {
+    margin-bottom: 2em;
+}
+
+.content .news .item a,
+.content .special .item a {
+    background-color: #5385c1;
+    color: white;
+    text-decoration: none;
+    height: 2.85em;
+    line-height: 2.95em;
+    padding: 0 1.5em;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.content .news .list .item:not(:last-child) {
+    border-right: 1px solid #d4e0ef;
+}
+
+.content .news .list .item:nth-child(1)>div {
+    width: 85%;
+}
+
+.content .news .list .item:nth-child(2)>div {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.content .news .list .item:nth-child(3)>div {
+    width: 85%;
+    margin-left: 10%;
+}
+
+
+/* Users */
+
+.content .users {
+    width: 100%;
+    background-color: #5385c1;
+    padding: 60px 0;
+}
+
+.content .users .head {
+    text-align: center;
+}
+
+.content .users .head h3 {
+    color: white;
+    font-size: 2.75em;
+    margin: 0 0 0.5em 0;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+.content .users .head p {
+    color: #bacee6;
+}
+
+.content .users .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 4em;
+}
+
+.content .users .list .item {
+    display: flex;
+    flex-direction: column;
+    width: 21%;
+    border: solid 1px rgba(255, 255, 255, 0.25);
+}
+
+.content .users .list .item .avatar {
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.content .users .list .item .avatar img {
+    width: 70%;
+    border-radius: 50%;
+}
+
+.content .users .list .item .info {
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.content .users .list .item .info p.name {
+    font-size: 1.35em;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.content .users .list .item .info p.position {
+    color: #bacee6;
+    margin-bottom: 2em;
+}
+
+
+/* Special */
+
+.content .special {
+    width: 100%;
+    background-color: white;
+    padding: 50px 0;
+}
+
+.content .special .head {
+    text-align: center;
+}
+
+.content .special .head h2 {
+    font-weight: 100;
+    font-size: 2.75em;
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+    color: #5385c1;
+}
+
+.content .special .list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: space-between;
+}
+
+.content .special .item {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+}
+
+.content .special .item .picture img {
+    width: 100%;
+}
+
+.content .special .item .info {
+    text-align: left;
+}
+
+.content .special .item .info .title {
+    color: #5385c1;
+    font-size: 1.35em;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0 0 1em 0;
+}
+
+.content .special .item .info .description {
+    margin-bottom: 2em;
+}
+
+
+/* Footer */
+
+.content .footer {
+    width: 100%;
+    background-color: white;
+    padding: 50px 0;
+}
+
+.content .footer .border {
+    border-top: 1px solid #dbdbdb;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.content .footer .left,
+.content .footer .right {
+    display: flex;
+    flex: 1;
+}
+
+.content .footer .left span,
+.content .footer .left a {
+    color: #bbb;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+.content .footer .left a:hover {
+    text-decoration: underline;
+}
+
+.content .footer .right ul {
+    list-style: none;
+    text-align: right;
+    width: 100%;
+}
+
+.content .footer .right ul li {
+    display: inline-block;
+}
+
+.content .footer .right ul li:not(:last-child) {
+    margin-right: 1em;
+}
+
+.content .footer .right ul li span {
+    display: none;
+}
+
+.content .footer .right ul li a {
+    color: #5385c1;
+}
